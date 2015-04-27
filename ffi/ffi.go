@@ -6,8 +6,8 @@ package ffi
 import "C"
 
 import (
-	"unsafe"
 	"reflect"
+	"unsafe"
 )
 
 type Type *C.ffi_type
@@ -58,7 +58,7 @@ const (
 
 type CIF C.ffi_cif
 
-func (cif *CIF) Types () (rtype Type, atypes []Type) {
+func (cif *CIF) Types() (rtype Type, atypes []Type) {
 	sh := (*reflect.SliceHeader)(unsafe.Pointer(&atypes))
 	sh.Data = uintptr(unsafe.Pointer(cif.arg_types))
 	sh.Cap = int(cif.nargs)
@@ -66,7 +66,6 @@ func (cif *CIF) Types () (rtype Type, atypes []Type) {
 	rtype = Type(cif.rtype)
 	return
 }
-
 
 func NewCIF(abi ABI, rtype Type, atypes ...Type) (CIF, error) {
 	var cif C.ffi_cif
