@@ -3,8 +3,8 @@ package fcall
 
 import (
 	"fmt"
-	"github.com/cookieo9/goffi/dlopen"
-	"github.com/cookieo9/goffi/ffi"
+	"github.com/pocke/goffi/dlopen"
+	"github.com/pocke/goffi/ffi"
 	"reflect"
 )
 

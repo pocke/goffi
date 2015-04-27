@@ -16,11 +16,11 @@ Installation and Basic Usage
 
 Install:
 
-    go get github.com/cookieo9/goffi/fcall
+    go get github.com/pocke/goffi/fcall
 
 Example (tested on Mac OS X):
 
-    import "github.com/cookieo9/goffi/fcall"
+    import "github.com/pocke/goffi/fcall"
     ...
     puts, _ := fcall.GetFunction("puts", SINT32, POINTER)
     cstr := fcall.CString("Hello, World!")
