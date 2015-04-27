@@ -1,7 +1,7 @@
 package ffi
 
 // #cgo darwin CFLAGS: -I/usr/include/ffi
-// #cgo LDFLAGS: -lffi
+// #cgo pkg-config: libffi
 // #include <ffi.h>
 import "C"
 
